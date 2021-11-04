@@ -8,34 +8,24 @@
               <tr>
                
                 <th>Creature</th>
+                <th>Description</th>
                 <th>Image</th>
                 
               </tr>
             </thead>
             <tbody>
-                <!-- <tr *ngFor = 'let creature of filteredProducts'>
-                    <td>
-                        <img *ngIf= 'showImage'
-                          [src] = 'product.imageUrl'
-                          [title]= 'product.productName'
-                          [style.width.px] = 'imageWidth'
-                          [style.margin.px] = 'imageMargin'>
-                    </td>
-                    <td>
-                        <a [routerLink] = "['/products', product.productId]">
-                            {{product.productName}}
-                        </a>
-                      </td>
-                    <td>{{product.productCode | lowercase | convertToSpaces: '-' }}</td>
-                    <td>{{product.releaseDate}}</td>
-                    <td>{{product.price | currency:'USD': 'symbol': '1.2-2' }}</td>
-                    <td><pm-star [rating]='product.starRating'
-                      (ratingClicked) = 'OnRatingClicked($event)'>
-  
-                    </pm-star></td>
+                <tr *ngFor = 'let creature of creatures'>
+                    
+                    
+                    <td>{{creature.creatureType  }}</td>
+                    <td>{{creature.description}}</td>
+                    <td><img [src] = "creature.imageUrl"
+                        [style.height.px] = "imageHeight"
+                        [style.margin.px] = "imageMargin"></td>
+                    
   
                 </tr>
-   -->
+  
             </tbody>
         </table>
     </div>
