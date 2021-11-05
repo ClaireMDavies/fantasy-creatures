@@ -14,14 +14,17 @@
               </tr>
             </thead>
             <tbody>
-                <tr *ngFor = 'let creature of creatures'>
+                <tr *ngFor = 'let creature of creatures' 
+                style= "background-color: rgb(247, 232, 242) ; color: rgb(168, 109, 164)">
                     
                     
-                    <td>{{creature.creatureType  }}</td>
+                    <td><a routerLink = "/creature-details" routerLinkActive="active">{{creature.creatureType}}</a></td>
                     <td>{{creature.description}}</td>
                     <td><img [src] = "creature.imageUrl"
                         [style.height.px] = "imageHeight"
-                        [style.margin.px] = "imageMargin"></td>
+                        [style.margin.px] = "imageMargin"
+                        [style.border] = "imageBorder"
+                        ></td>
                     
   
                 </tr>
@@ -33,3 +36,4 @@
 
    
 </div>
+<router-outlet></router-outlet>

@@ -10,6 +10,7 @@ export class CreatureListComponent {
     pageTitle: string = "Creatures";
     imageHeight = 150;
     imageMargin = 2;
+    imageBorder = "solid";
     creatures: any[] = [
         {
             "creatureId": 1,
